@@ -1,5 +1,6 @@
 ---
 name: krea2-prompt-writing
+version: 0.1.0
 description: Write and expand text-to-image prompts for the Krea 2 model (RAW/Turbo). Use when creating a new Krea 2 image prompt from a short idea, polishing an existing Krea 2 prompt, or converting a tag-style/keyword prompt into Krea 2's natural-language format.
 ---
 
