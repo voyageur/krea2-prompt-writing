@@ -11,6 +11,7 @@ This is a prompt-*writing* skill — it works anywhere, with no API or MCP serve
 - **Expands short ideas** — turns "a mouse on a branch" into a full, well-structured Krea 2 prompt using a 9-rule expansion system (faithfulness first, no invented details, medium preserved).
 - **Polishes existing prompts** — if you already have a detailed prompt, it lightly finalizes rather than rewriting.
 - **Converts tag lists** — rewrites Danbooru/SDXL-style comma-separated tags into one cohesive natural-language paragraph without dropping or inventing content.
+- **Reverse-engineers images** — turns a reference image into a faithful recreate prompt using an observe-before-infer procedure (needs a vision-capable model).
 
 ## How it works
 
@@ -24,7 +25,8 @@ references/
 ├── best-practices.md         # community conventions (name the medium first, etc.)
 ├── styles.md                 # curated medium/genre catalog with trigger phrasing
 ├── model-variants.md         # RAW/Turbo vs Medium/Large, settings, draft→commit
-└── troubleshooting.md        # symptom → fix table for bad generations
+├── troubleshooting.md        # symptom → fix table for bad generations
+└── reverse-prompting.md      # image → prompt: observe-before-infer procedure
 ```
 
 The agent reads `SKILL.md`, then pulls in the references it needs for the specific task. Final output is always a single English paragraph — no bullets, no JSON, no negative prompts or settings unless explicitly requested.
@@ -57,6 +59,7 @@ The official `references/prompting.md` and `references/expansion-system.txt` are
 - [fal.ai — Krea 2 Prompting Guide + Examples](https://fal.ai/learn/tools/krea-2-prompting-guide)
 - [Ambience AI — Write Better Prompts for Krea 2 Images](https://www.ambienceai.com/tutorials/krea-2-prompting-guide)
 - [cicalooo — Krea 2 Prompting Guide (Gist)](https://gist.github.com/cicalooo/6d26f1d4d54f6d05e87e6fde94b703b7)
+- [`AI-KSK/krea2-prompt-suite`](https://github.com/AI-KSK/krea2-prompt-suite) — structural inspiration for the reverse-prompting procedure
 
 ## License
 
