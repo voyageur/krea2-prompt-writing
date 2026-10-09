@@ -12,6 +12,7 @@ This is a prompt-*writing* skill — it works anywhere, with no API or MCP serve
 - **Polishes existing prompts** — if you already have a detailed prompt, it lightly finalizes rather than rewriting.
 - **Converts tag lists** — rewrites Danbooru/SDXL-style comma-separated tags into one cohesive natural-language paragraph without dropping or inventing content.
 - **Reverse-engineers images** — turns a reference image into a faithful recreate prompt using an observe-before-infer procedure (needs a vision-capable model).
+- **Evaluates prompts** — scores an existing Krea 2 prompt against a best-practice rubric, flags contradictions and negation traps, and returns the highest-impact fixes.
 
 ## How it works
 
@@ -26,7 +27,8 @@ references/
 ├── styles.md                 # curated medium/genre catalog with trigger phrasing
 ├── model-variants.md         # RAW/Turbo vs Medium/Large, settings, draft→commit
 ├── troubleshooting.md        # symptom → fix table for bad generations
-└── reverse-prompting.md      # image → prompt: observe-before-infer procedure
+├── reverse-prompting.md      # image → prompt: observe-before-infer procedure
+└── evaluate.md               # score a prompt + prioritized fixes
 ```
 
 The agent reads `SKILL.md`, then pulls in the references it needs for the specific task. Final output is always a single English paragraph — no bullets, no JSON, no negative prompts or settings unless explicitly requested.
